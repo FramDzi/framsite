@@ -6,4 +6,4 @@
 	<a href="{base}/pagina2">Página 2</a>
 </div>
 
-<a class="m-2" href="/{base}">Voltar</a>
+<a class="m-2" href="{base}">Voltar</a>
