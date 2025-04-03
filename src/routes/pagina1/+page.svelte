@@ -1,5 +1,6 @@
 <script>
 	import { base } from "$app/paths";
+	import Oiiii from "$lib/oiiii.svelte";
 </script>
 
 <div class="flex gap-x-4 p-2">
@@ -7,3 +8,7 @@
 </div>
 
 <a class="m-2" href="{base}">Voltar</a>
+
+<Oiiii></Oiiii>
+
+
