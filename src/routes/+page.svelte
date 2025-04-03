@@ -6,7 +6,7 @@
 let paginas = ["Decks de Ygo", "Animes", "Idk"];
 </script>
 
-<link rel="icon" href="Echo 6.5.png">
+<link rel="icon" href="{echo}">
 
 <div class="flex gap-x-4 p-2">
 	<a href="{base}/pagina1">Página 1</a>
