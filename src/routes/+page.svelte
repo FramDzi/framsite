@@ -1,5 +1,7 @@
 <script>
 	import { base } from "$app/paths";
+	import echo from "$lib/assets/pics/Echo 6.5.png";
+	import ygo from "$lib/assets/pics/つまようじ.png"
 
 let paginas = ["Decks de Ygo", "Animes", "Idk"];
 </script>
@@ -66,7 +68,7 @@ let paginas = ["Decks de Ygo", "Animes", "Idk"];
   
 	<div class = "eu-sou-assim">
 	  <h1>Eu sou literalmente assim ---></h1>
-	<img src = "src\lib\assets\pics\Echo 6.5.png" alt = "Eu sou assim" style="margin-left: 10px; height: 100%">
+	<img src = "{echo}" alt = "Eu sou assim" style="margin-left: 10px; height: 100%">
 	</div>
   
 
@@ -77,7 +79,7 @@ let paginas = ["Decks de Ygo", "Animes", "Idk"];
 		<h1 class = "titulodepagina">
 		  {paginatitle}
 		</h1>
-		<img src = "src\lib\assets\pics\つまようじ.png" class = "imagemcaixadepagina" alt = "fodase">
+		<img src = "{ygo}" class = "imagemcaixadepagina" alt = "fodase">
 	  </div>
 	  </a>
 	  {/each}
