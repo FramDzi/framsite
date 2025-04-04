@@ -3,7 +3,7 @@
 	import echo from '$lib/assets/pics/Echo 6.5.png';
 	import ygo from '$lib/assets/pics/つまようじ.png';
 
-	let paginas = ['Decks de Ygo', 'Animes', 'Idk'];
+	let paginas = ['Decks de Ygo'];
 </script>
 
 
