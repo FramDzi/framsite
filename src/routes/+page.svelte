@@ -6,8 +6,6 @@
 	let paginas = ['Decks de Ygo'];
 </script>
 
-
-
 <h1>Framsite 2.0 :d</h1>
 
 <div class="eu-sou-assim">
