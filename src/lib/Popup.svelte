@@ -6,7 +6,7 @@
 
 <div class="enfeite">
 	<p style="margin:10px;">{description}</p>
-	<img src={base + '/gifs/yugioh-arc-v-yu-gi-oh.gif'} style="margin: 10px;" />
+	<img src={base + imageUrl} style="margin: 10px;" />
 </div>
 
 <style>

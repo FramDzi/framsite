@@ -51,7 +51,7 @@
 		<div class="popup" id={'popup' + archetype.name}>
 			<h1 class="popup-title">{archetype.name}</h1>
 			{#if archetype.description}
-				<Popup imageUrl="{archetype.description.image}," description={archetype.description.text} />
+				<Popup imageUrl="{archetype.description.image}" description={archetype.description.text} />
 			{/if}
 		</div>
 	</div>
