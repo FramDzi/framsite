@@ -48,6 +48,7 @@ const archetypes = [
 	{ name: '', type: '' }
 ];
 
+
 archetypes.forEach((archetype) => {
 	const normalizedName = archetype.name.replace(/\//g, '');
 	if (images[normalizedName]) {
@@ -56,6 +57,13 @@ archetypes.forEach((archetype) => {
 		archetype.pic = '';
 	}
 });
+
+
+archetypes.forEach((archetype) => {
+		archetype.pic = "src/lib/assets/ygo/archetype pics/"+archetype.name+".png";
+	}
+);
+
 
 archetypes.forEach((archetype) => {
 	const normalizedName = archetype.name.replace(/\//g, '');
