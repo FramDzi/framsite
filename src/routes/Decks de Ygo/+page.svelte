@@ -1,5 +1,7 @@
 <script>
-	import Oiiii from '$lib/oiiii.svelte';
+	import { base } from '$app/paths';
+
+	import Popup from '$lib/Popup.svelte';
 	import archetypes from './archetypes.js';
 
 	let currentpopup = '';
@@ -7,7 +9,7 @@
 		// If event is undefined, allow the function to close the popup (like from a button)
 		// Otherwise, only close if the click happened outside the popup content.
 		if (event) {
-			var popupContent = document.getElementById('popup'+currentpopup);
+			var popupContent = document.getElementById('popup' + currentpopup);
 			if (popupContent.contains(event.target)) {
 				// Click occurred inside the popup; do nothing.
 				return;
@@ -20,7 +22,7 @@
 
 	function popup(name) {
 		event.stopPropagation();
-        // Displays popup with id name
+		// Displays popup with id name
 		document.getElementById(name).style.display = 'block';
 		document.addEventListener('click', closepopup);
 		currentpopup = name;
@@ -35,7 +37,7 @@
 	{#each archetypes as archetype}
 		<div class="archetypebox" on:click={() => popup(archetype.name)}>
 			<div class="archetypeimagebox">
-				<img class="archetypeimage" src={archetype.pic} alt={archetype.name} />
+				<img class="archetypeimage" src={base + archetype.image} alt={archetype.name} />
 			</div>
 			<div class="textinarchetypebox">
 				<h1 class="textinarchetypeboxh1">
@@ -47,14 +49,14 @@
 </div>
 
 {#each archetypes as archetype}
-<div class="popupbg" id={archetype.name}>
-    <div class="popup" id = {"popup"+archetype.name}>
-        <h1 class="popup-title">{archetype.name}</h1>
-        {#if archetype.desc}
-            <svelte:component this={archetype.desc} />
-        {/if}
-    </div>
-</div>
+	<div class="popupbg" id={archetype.name}>
+		<div class="popup" id={'popup' + archetype.name}>
+			<h1 class="popup-title">{archetype.name}</h1>
+			{#if archetype.description}
+				<Popup imageUrl="{archetype.description.image}" description={archetype.description.text} />
+			{/if}
+		</div>
+	</div>
 {/each}
 
 <style>
@@ -144,8 +146,8 @@
 		border-radius: 20px;
 		z-index: 1000;
 		border: 2px solid black;
-        display: flex;
-        flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.popupbg {
@@ -161,7 +163,7 @@
 		z-index: 1000; /* Lower than popup if popup has a higher z-index */
 	}
 
-    .popup-title {
-        text-align: center;
-    }
+	.popup-title {
+		text-align: center;
+	}
 </style>

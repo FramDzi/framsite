@@ -1,21 +1,30 @@
-const modules = import.meta.glob('$lib/assets/ygo/archetype pics/*.png', { eager: true });
-const modulesdesc = import.meta.glob('$lib/assets/ygo/archetype desc/*.svelte', { eager : true });
+// const modules = import.meta.glob('$lib/assets/ygo/archetype pics/*.png', { eager: true });
+// const modulesdesc = import.meta.glob('$lib/assets/ygo/archetype desc/*.svelte', { eager : true });
 
-const images = {};
-for (const path in modules) {
-	const filename = path.split('/').pop().replace('.png', '');
-	images[filename] = modules[path].default;
-}
+// const images = {};
+// for (const path in modules) {
+	// const filename = path.split('/').pop().replace('.png', '');
+	// images[filename] = modules[path].default;
+// }
 
-console.log(modulesdesc);
-const desc = {};
-for (const path in modulesdesc) {
-	const filename = path.split('/').pop().replace('.svelte', '');
-	desc[filename] = modulesdesc[path].default;
-}
+// console.log(modulesdesc);
+// const desc = {};
+// for (const/ path in modulesdesc) {
+	// const filename = path.split('/').pop().replace('.svelte', '');
+	// desc[filename] = modulesdesc[path].default;
+// }
 
 const archetypes = [
-	{ name: 'Melodious', type: 'MD', desc: 'poggers' },
+	{ 
+		name: 'Melodious', 
+		type: 'MD', 
+		desc: 'poggers', 
+		image: "/images/つまようじ.png",
+		description: {
+			image: "/gifs/yugioh-arc-v-yu-gi-oh.gif",
+			text: "asdf",
+		}
+	},
 	{ name: 'Ice Barrier', type: 'MD', desc: ':d' },
 	{ name: 'Ritual Beast', type: 'MD' },
 	{ name: 'Noble Knight', type: '' },
@@ -49,31 +58,31 @@ const archetypes = [
 ];
 
 
-archetypes.forEach((archetype) => {
-	const normalizedName = archetype.name.replace(/\//g, '');
-	if (images[normalizedName]) {
-		archetype.pic = images[normalizedName]; // Add image path
-	} else {
-		archetype.pic = '';
-	}
-});
+// archetypes.forEach((archetype) => {
+// 	const normalizedName = archetype.name.replace(/\//g, '');
+// 	if (images[normalizedName]) {
+// 		archetype.pic = images[normalizedName]; // Add image path
+// 	} else {
+// 		archetype.pic = '';
+// 	}
+// });
 
 
-archetypes.forEach((archetype) => {
-		archetype.pic = "src/lib/assets/ygo/archetype pics/"+archetype.name+".png";
-	}
-);
+// archetypes.forEach((archetype) => {
+// 		archetype.pic = "src/lib/assets/ygo/archetype pics/"+archetype.name+".png";
+// 	}
+// );
 
 
-archetypes.forEach((archetype) => {
-	const normalizedName = archetype.name.replace(/\//g, '');
-	if (desc[normalizedName]) {
-		archetype.desc = desc[normalizedName]; // Add image path
-	} else {
-		archetype.desc = '';
-	}
-});
+// archetypes.forEach((archetype) => {
+// 	const normalizedName = archetype.name.replace(/\//g, '');
+// 	if (desc[normalizedName]) {
+// 		archetype.desc = desc[normalizedName]; // Add image path
+// 	} else {
+// 		archetype.desc = '';
+// 	}
+// });
 
-console.log(desc);
+// console.log(desc);
 
 export default archetypes;
