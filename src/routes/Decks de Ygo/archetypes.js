@@ -14,14 +14,12 @@
 	// desc[filename] = modulesdesc[path].default;
 // }
 
-import { base } from "$app/paths";
-
 const archetypes = [
 	{ 
 		name: 'Melodious', 
 		type: 'MD', 
 		desc: 'poggers', 
-		image: `${base}/images/Echo 6.5.png`,
+		image: "/images/つまようじ.png",
 		description: {
 			image: "/gifs/yugioh-arc-v-yu-gi-oh.gif",
 			text: "asdf",

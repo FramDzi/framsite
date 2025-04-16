@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	import Popup from '$lib/Popup.svelte';
 	import archetypes from './archetypes.js';
 
@@ -35,7 +37,7 @@
 	{#each archetypes as archetype}
 		<div class="archetypebox" on:click={() => popup(archetype.name)}>
 			<div class="archetypeimagebox">
-				<img class="archetypeimage" src={archetype.image} alt={archetype.name} />
+				<img class="archetypeimage" src={base + archetype.image} alt={archetype.name} />
 			</div>
 			<div class="textinarchetypebox">
 				<h1 class="textinarchetypeboxh1">
