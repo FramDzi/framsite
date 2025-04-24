@@ -51,7 +51,7 @@ const archetypes = [
 
 for (const archetype of archetypes) {
 	let normName = archetype.name.replace(/\//g, '');
-	archetype.pic = "src/lib/assets/ygo/archetype pics/"+normName+".png";
+	archetype.pic = `${base}/pics/archetype pics/`+normName+".png";
 }
 
 

@@ -1,5 +1,4 @@
 <script>
-	import { base } from '$app/paths';
 	import archetypes from './archetypes.js';
 
 	let currentpopup = '';
