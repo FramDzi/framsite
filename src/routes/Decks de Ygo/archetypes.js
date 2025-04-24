@@ -28,25 +28,6 @@ const archetypes = [
 	{ name: 'Mikanko', type: 'MD' },
 	{ name: 'D/D/D', type: 'MD' },
 	{ name: 'Speedroid', type: 'MD' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' },
-	{ name: '', type: '' }
 ];
 
 for (const archetype of archetypes) {
