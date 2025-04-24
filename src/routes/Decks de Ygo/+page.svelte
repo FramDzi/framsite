@@ -1,5 +1,5 @@
 <script>
-	import Oiiii from '$lib/oiiii.svelte';
+	import { base } from '$app/paths';
 	import archetypes from './archetypes.js';
 
 	let currentpopup = '';
