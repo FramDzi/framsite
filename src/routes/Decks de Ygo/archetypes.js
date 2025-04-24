@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 // const modules = import.meta.glob('$lib/assets/ygo/archetype pics/*.png', { eager: true });
 const modulesdesc = import.meta.glob('$lib/assets/ygo/archetype desc/*.svelte', { eager : true });
 
