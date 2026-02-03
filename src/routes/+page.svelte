@@ -1,24 +1,33 @@
 <script>
 	import { base } from '$app/paths';
+	const imagens = import.meta.glob('$lib/home/*.png', { eager: true, query: '?url', import: 'default' });
+	import { listafix, getImg } from '$lib/utils.js';
+	
+	
+	
+	let paginas0 = [
+	{ name: 'Decks de Ygo', link: 'decks'},
+	{ name: 'Personagens Favoritos', link: 'personagens'}
+	];
 
-	let paginas = ['Decks de Ygo'];
+	let paginas = listafix(paginas0, imagens);
 </script>
 
 <h1>Framsite 2.0 :d</h1>
 
 <div class="eu-sou-assim">
 	<h1>Eu sou literalmente assim ---></h1>
-	<img src={`${base}/pics/Echo 6.5.png`} alt="Eu sou assim" style="margin-left: 10px; height: 100%" />
+	<img src={getImg(imagens, 'Echo 6.5')} alt="Eu sou assim" style="margin-left: 10px; height: 100%" />
 </div>
 
 <div class="caixadepagina-container">
-	{#each paginas as paginatitle}
-		<a href="{base}/{paginatitle}">
+	{#each paginas as pagina}
+		<a href="{base}/{pagina.link}">
 			<div class="caixadepagina">
 				<h1 class="titulodepagina">
-					{paginatitle}
+					{pagina.name}
 				</h1>
-				<img src={`${base}/pics/つまようじ.png`} class="imagemcaixadepagina" alt="fodase" />
+				<img src={pagina.pic} class="imagemcaixadepagina" alt={pagina.name} />
 			</div>
 		</a>
 	{/each}

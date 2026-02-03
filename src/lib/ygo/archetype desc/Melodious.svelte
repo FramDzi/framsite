@@ -1,5 +1,5 @@
 <script>
-    import yuzu from '$lib/assets/ygo/archetype desc/yugioh-arc-v-yu-gi-oh.gif';
+    import yuzu from '$lib/ygo/archetype desc/yugioh-arc-v-yu-gi-oh.gif';
 </script>
 
 <div class = "enfeite">
